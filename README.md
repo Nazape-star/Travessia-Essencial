@@ -1,6 +1,6 @@
 # Travessia Essencial
 
-Página de divulgação da **Travessia Essencial — O Chamado de Volta para Mim**, criada em HTML, CSS e JavaScript simples para publicação no GitHub Pages.
+Página de divulgação da **Travessia Essencial — O caminho de volta para mim**, criada em HTML, CSS e JavaScript simples para publicação no GitHub Pages.
 
 ## Arquivos
 
