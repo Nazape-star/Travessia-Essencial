@@ -1,529 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta
-      name="description"
-      content="Formulário de interesse para cursos e encontros do Despertar Essencial."
-    />
-    <title>Inscrição em cursos e encontros | Despertar Essencial</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --cream: #fbf3df;
-        --solar: #f7df9d;
-        --gold: #c89b35;
-        --deep-gold: #8b651b;
-        --forest: #173c2f;
-        --forest-2: #245343;
-        --sea: #2f6f67;
-        --white: #fffdf7;
-        --ink: #23372f;
-        --muted: #637269;
-        --danger: #9d2f2f;
-        --shadow: 0 24px 70px rgba(23, 60, 47, 0.16);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="Formulário de inscrição em cursos e encontros do Despertar Essencial." />
+  <title>Inscrição em cursos e encontros | Despertar Essencial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #fbf3df;
+      --gold: #c89b35;
+      --deep-gold: #8b651b;
+      --forest: #173c2f;
+      --sea: #2f6f67;
+      --white: #fffdf7;
+      --ink: #23372f;
+      --muted: #637269;
+      --danger: #9d2f2f;
+      --shadow: 0 24px 70px rgba(23, 60, 47, 0.16);
+    }
 
-      * {
-        box-sizing: border-box;
-      }
+    * { box-sizing: border-box; }
 
-      body {
-        margin: 0;
-        min-height: 100vh;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at 18% 0%, rgba(247, 223, 157, 0.72), transparent 28rem),
-          radial-gradient(circle at 85% 14%, rgba(47, 111, 103, 0.22), transparent 30rem),
-          linear-gradient(135deg, var(--cream) 0%, #f4e6ca 52%, #e8d4ae 100%);
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-      }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(247, 223, 157, 0.72), transparent 28rem),
+        radial-gradient(circle at 85% 14%, rgba(47, 111, 103, 0.22), transparent 30rem),
+        linear-gradient(135deg, var(--cream) 0%, #f4e6ca 52%, #e8d4ae 100%);
+      font-family: "Inter", system-ui, sans-serif;
+      line-height: 1.6;
+    }
 
-      a {
-        color: inherit;
-      }
+    .page-shell {
+      width: min(860px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 18px 0 36px;
+    }
 
-      .page-shell {
-        width: min(860px, calc(100% - 24px));
-        margin: 0 auto;
-        padding: 18px 0 36px;
-      }
+    .card {
+      overflow: hidden;
+      border: 1px solid rgba(200, 155, 53, 0.28);
+      border-radius: 30px;
+      background: rgba(255, 253, 247, 0.94);
+      box-shadow: var(--shadow);
+    }
 
-      .card {
-        overflow: hidden;
-        border: 1px solid rgba(200, 155, 53, 0.28);
-        border-radius: 30px;
-        background: rgba(255, 253, 247, 0.92);
-        box-shadow: var(--shadow);
-      }
+    .header {
+      padding: clamp(28px, 6vw, 52px) clamp(20px, 6vw, 48px);
+      background:
+        linear-gradient(rgba(255, 253, 247, 0.89), rgba(255, 253, 247, 0.94)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80") center/cover;
+      text-align: center;
+    }
 
-      .header {
-        padding: clamp(28px, 6vw, 52px) clamp(20px, 6vw, 48px);
-        background:
-          linear-gradient(rgba(255, 253, 247, 0.89), rgba(255, 253, 247, 0.93)),
-          url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80") center/cover;
-        text-align: center;
-      }
+    .logo {
+      display: block;
+      width: 104px;
+      height: auto;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      filter: drop-shadow(0 10px 18px rgba(139, 101, 27, 0.2));
+    }
 
-      .logo {
-        display: block;
-        width: 104px;
-        height: auto;
-        margin: 0 auto 18px;
-        border-radius: 50%;
-        filter: drop-shadow(0 10px 18px rgba(139, 101, 27, 0.2));
-      }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--deep-gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-      .eyebrow {
-        margin: 0 0 12px;
-        color: var(--deep-gold);
-        font-size: 0.78rem;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
+    h1, h2 {
+      margin: 0;
+      color: var(--forest);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: 1.05;
+    }
 
-      h1,
-      h2 {
-        margin: 0;
-        color: var(--forest);
-        font-family: "Cormorant Garamond", Georgia, serif;
-        line-height: 1.05;
-      }
+    h1 { font-size: clamp(2.35rem, 7vw, 4.6rem); }
+    h2 { font-size: clamp(2rem, 6vw, 3.25rem); }
 
-      h1 {
-        font-size: clamp(2.35rem, 7vw, 4.6rem);
-      }
+    .subtitle {
+      max-width: 650px;
+      margin: 18px auto 0;
+      color: var(--sea);
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
 
-      h2 {
-        font-size: clamp(2rem, 6vw, 3.25rem);
-      }
+    .content { padding: clamp(24px, 6vw, 48px); }
 
-      .subtitle {
-        max-width: 650px;
-        margin: 18px auto 0;
-        color: var(--sea);
-        font-size: 1.05rem;
-        font-weight: 600;
-      }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
 
-      .content {
-        padding: clamp(24px, 6vw, 48px);
-      }
+    .field { display: grid; gap: 8px; }
+    .field--full { grid-column: 1 / -1; }
 
-      .notice {
-        display: none;
-        margin: 0 0 22px;
-        padding: 16px 18px;
-        border: 1px solid rgba(200, 155, 53, 0.38);
-        border-radius: 18px;
-        background: rgba(247, 223, 157, 0.34);
-        color: var(--forest);
-        font-size: 0.94rem;
-      }
+    label {
+      color: var(--forest);
+      font-weight: 700;
+    }
 
-      .form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
+    .required { color: var(--danger); }
 
-      .field {
-        display: grid;
-        gap: 8px;
-      }
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(36, 83, 67, 0.24);
+      border-radius: 14px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      padding: 14px 15px;
+      outline: none;
+    }
 
-      .field--full {
-        grid-column: 1 / -1;
-      }
+    input:focus, textarea:focus {
+      border-color: var(--sea);
+      box-shadow: 0 0 0 4px rgba(47, 111, 103, 0.12);
+    }
 
-      label,
-      legend {
-        color: var(--forest);
-        font-weight: 700;
-      }
+    textarea { min-height: 120px; resize: vertical; }
 
-      .required {
-        color: var(--danger);
-      }
+    .help, .privacy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
 
-      input,
-      textarea {
-        width: 100%;
-        border: 1px solid rgba(36, 83, 67, 0.24);
-        border-radius: 14px;
-        background: #ffffff;
-        color: var(--ink);
-        font: inherit;
-        padding: 14px 15px;
-        outline: none;
-        transition: border-color 160ms ease, box-shadow 160ms ease;
-      }
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(47, 111, 103, 0.07);
+    }
 
-      input:focus,
-      textarea:focus {
-        border-color: var(--sea);
-        box-shadow: 0 0 0 4px rgba(47, 111, 103, 0.12);
-      }
+    .consent input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      flex: 0 0 auto;
+    }
 
-      textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
+    .consent label { font-size: 0.92rem; font-weight: 500; }
+    .privacy { margin-top: 18px; }
 
-      .help {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.86rem;
-      }
+    .actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
 
-      .consent {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        margin-top: 4px;
-        padding: 16px;
-        border-radius: 16px;
-        background: rgba(47, 111, 103, 0.07);
-      }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      border: 0;
+      border-radius: 999px;
+      padding: 0 28px;
+      color: var(--white);
+      background: linear-gradient(135deg, #1f6b51, var(--forest));
+      box-shadow: 0 16px 32px rgba(23, 60, 47, 0.24);
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-      .consent input {
-        width: 20px;
-        height: 20px;
-        margin-top: 2px;
-        flex: 0 0 auto;
-      }
+    .button:disabled { opacity: 0.62; cursor: wait; }
 
-      .consent label {
-        font-size: 0.92rem;
-        font-weight: 500;
-      }
+    .back-link {
+      justify-self: center;
+      color: var(--sea);
+      font-size: 0.93rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-      .privacy {
-        margin: 18px 0 0;
-        color: var(--muted);
-        font-size: 0.84rem;
-      }
+    .status {
+      min-height: 24px;
+      margin: 14px 0 0;
+      color: var(--forest);
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
 
-      .actions {
-        display: grid;
-        gap: 12px;
-        margin-top: 24px;
-      }
+    .confirmation {
+      display: none;
+      padding: clamp(36px, 8vw, 68px) clamp(22px, 7vw, 56px);
+      text-align: center;
+    }
 
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 58px;
-        border: 0;
-        border-radius: 999px;
-        padding: 0 28px;
-        color: var(--white);
-        background: linear-gradient(135deg, #1f6b51, var(--forest));
-        box-shadow: 0 16px 32px rgba(23, 60, 47, 0.24);
-        font: inherit;
-        font-weight: 800;
-        text-decoration: none;
-        cursor: pointer;
-        transition: transform 180ms ease, box-shadow 180ms ease;
-      }
+    .check {
+      display: grid;
+      place-items: center;
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sea), var(--forest));
+      color: #fff;
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
 
-      .button:hover,
-      .button:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 18px 38px rgba(23, 60, 47, 0.3);
-      }
+    .confirmation p {
+      max-width: 620px;
+      margin: 18px auto 0;
+      color: var(--muted);
+    }
 
-      .button:disabled {
-        opacity: 0.58;
-        cursor: not-allowed;
-        transform: none;
-      }
+    .confirmation .button { margin-top: 26px; }
 
-      .back-link {
-        display: inline-flex;
-        justify-self: center;
-        color: var(--sea);
-        font-size: 0.93rem;
-        font-weight: 700;
-        text-decoration: none;
-      }
+    .footer {
+      padding: 24px 18px 30px;
+      color: var(--forest);
+      text-align: center;
+      font-size: 0.9rem;
+    }
 
-      .status {
-        min-height: 24px;
-        margin: 14px 0 0;
-        color: var(--forest);
-        text-align: center;
-        font-size: 0.92rem;
-        font-weight: 600;
-      }
+    .footer p { margin: 4px 0 0; }
 
-      .confirmation {
-        display: none;
-        padding: clamp(30px, 7vw, 60px) clamp(22px, 7vw, 56px);
-        text-align: center;
-      }
+    @media (max-width: 680px) {
+      .page-shell { width: min(100% - 16px, 860px); padding-top: 8px; }
+      .card { border-radius: 24px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field--full { grid-column: auto; }
+      .button { width: 100%; padding: 0 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card" aria-labelledby="page-title">
+      <header class="header">
+        <img class="logo" src="assets/logo-despertar-essencial.jpeg.jpeg" alt="Logo Despertar Essencial" width="104" height="104" />
+        <p class="eyebrow">Despertar Essencial</p>
+        <h1 id="page-title">Inscrição em cursos e encontros</h1>
+        <p class="subtitle">
+          Preencha seus dados para manifestar interesse. A confirmação da vaga, o pagamento e as orientações serão enviados posteriormente por WhatsApp ou e-mail.
+        </p>
+      </header>
 
-      .check {
-        display: grid;
-        place-items: center;
-        width: 78px;
-        height: 78px;
-        margin: 0 auto 22px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--sea), var(--forest));
-        color: #fff;
-        font-size: 2.8rem;
-        font-weight: 800;
-      }
+      <div class="content" id="form-area">
+        <form id="course-form" action="https://formspree.io/f/xkodjngg" method="POST">
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="curso">Curso ou encontro de interesse <span class="required">*</span></label>
+              <input id="curso" name="curso" type="text" placeholder="Ex.: Travessia Essencial, roda de conversa ou outro curso" required />
+              <p class="help">Ao divulgar um curso, o nome dele poderá aparecer automaticamente neste campo.</p>
+            </div>
 
-      .confirmation p {
-        max-width: 620px;
-        margin: 18px auto 0;
-        color: var(--muted);
-        font-size: 1rem;
-      }
+            <div class="field">
+              <label for="nome">Nome completo <span class="required">*</span></label>
+              <input id="nome" name="nome" type="text" required autocomplete="name" />
+            </div>
 
-      .confirmation .button {
-        margin-top: 26px;
-      }
+            <div class="field">
+              <label for="email">E-mail <span class="required">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
 
-      .footer {
-        padding: 24px 18px 30px;
-        color: var(--forest);
-        text-align: center;
-        font-size: 0.9rem;
-      }
+            <div class="field">
+              <label for="whatsapp">WhatsApp <span class="required">*</span></label>
+              <input id="whatsapp" name="whatsapp" type="tel" placeholder="(91) 99999-9999" required autocomplete="tel" />
+            </div>
 
-      .footer p {
-        margin: 4px 0 0;
-      }
+            <div class="field">
+              <label for="cidade_estado">Cidade e estado</label>
+              <input id="cidade_estado" name="cidade_estado" type="text" placeholder="Ex.: Belém - PA" />
+            </div>
 
-      @media (max-width: 680px) {
-        .page-shell {
-          width: min(100% - 16px, 860px);
-          padding-top: 8px;
-        }
+            <div class="field field--full">
+              <label for="observacoes">Observações ou mensagem</label>
+              <textarea id="observacoes" name="observacoes" placeholder="Escreva aqui alguma informação que considere importante."></textarea>
+            </div>
 
-        .card {
-          border-radius: 24px;
-        }
-
-        .form-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .field--full {
-          grid-column: auto;
-        }
-
-        .button {
-          width: 100%;
-          padding: 0 18px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="page-shell">
-      <section class="card" aria-labelledby="page-title">
-        <header class="header">
-          <img
-            class="logo"
-            src="assets/logo-despertar-essencial.jpeg.jpeg"
-            alt="Logo Despertar Essencial"
-            width="104"
-            height="104"
-          />
-          <p class="eyebrow">Despertar Essencial</p>
-          <h1 id="page-title">Inscrição em cursos e encontros</h1>
-          <p class="subtitle">
-            Preencha seus dados para manifestar interesse. A confirmação da vaga, o pagamento e as
-            orientações de acesso serão enviados posteriormente por WhatsApp ou e-mail.
-          </p>
-        </header>
-
-        <div class="content" id="form-area">
-          <div class="notice" id="configuration-notice" role="status">
-            Esta página já está preparada, mas o recebimento das respostas ainda precisa ser ativado.
+            <div class="field field--full">
+              <div class="consent">
+                <input id="consentimento" name="consentimento" type="checkbox" value="sim" required />
+                <label for="consentimento">
+                  Concordo que meus dados sejam utilizados exclusivamente para contato, organização da inscrição e envio de informações sobre o curso ou encontro escolhido. <span class="required">*</span>
+                </label>
+              </div>
+            </div>
           </div>
 
-          <form id="course-form">
-            <div class="form-grid">
-              <div class="field field--full">
-                <label for="curso">Curso ou encontro de interesse <span class="required">*</span></label>
-                <input
-                  id="curso"
-                  name="curso"
-                  type="text"
-                  placeholder="Ex.: Travessia Essencial, roda de conversa ou outro curso"
-                  required
-                  autocomplete="off"
-                />
-                <p class="help">Este campo pode ser preenchido automaticamente quando o link do curso for divulgado.</p>
-              </div>
+          <input type="hidden" name="_subject" value="Nova inscrição — Despertar Essencial" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
 
-              <div class="field">
-                <label for="nome">Nome completo <span class="required">*</span></label>
-                <input id="nome" name="nome" type="text" required autocomplete="name" />
-              </div>
-
-              <div class="field">
-                <label for="email">E-mail <span class="required">*</span></label>
-                <input id="email" name="email" type="email" required autocomplete="email" />
-              </div>
-
-              <div class="field">
-                <label for="whatsapp">WhatsApp <span class="required">*</span></label>
-                <input
-                  id="whatsapp"
-                  name="whatsapp"
-                  type="tel"
-                  placeholder="(91) 99999-9999"
-                  required
-                  autocomplete="tel"
-                />
-              </div>
-
-              <div class="field">
-                <label for="cidade_estado">Cidade e estado</label>
-                <input
-                  id="cidade_estado"
-                  name="cidade_estado"
-                  type="text"
-                  placeholder="Ex.: Belém - PA"
-                  autocomplete="address-level2"
-                />
-              </div>
-
-              <div class="field field--full">
-                <label for="observacoes">Observações ou mensagem</label>
-                <textarea
-                  id="observacoes"
-                  name="observacoes"
-                  placeholder="Escreva aqui alguma informação que considere importante."
-                ></textarea>
-              </div>
-
-              <div class="field field--full">
-                <div class="consent">
-                  <input id="consentimento" name="consentimento" type="checkbox" value="sim" required />
-                  <label for="consentimento">
-                    Concordo que meus dados sejam utilizados exclusivamente para contato, organização
-                    da inscrição e envio de informações sobre o curso ou encontro escolhido.
-                    <span class="required">*</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <input type="hidden" name="_subject" value="Nova inscrição — Despertar Essencial" />
-
-            <p class="privacy">
-              Nenhum dado de acesso ao Zoom ou a grupos fechados será exibido nesta página. Essas
-              informações serão enviadas somente após a confirmação da participação.
-            </p>
-
-            <div class="actions">
-              <button class="button" id="submit-button" type="submit">Enviar minha inscrição</button>
-              <a class="back-link" href="index.html">Voltar para a Travessia Essencial</a>
-            </div>
-            <p class="status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-
-        <div class="confirmation" id="confirmation-area" aria-live="polite">
-          <div class="check" aria-hidden="true">✓</div>
-          <h2>Inscrição recebida!</h2>
-          <p>
-            Agradecemos seu interesse. Entraremos em contato pelo WhatsApp ou por e-mail para confirmar
-            a vaga, orientar sobre o pagamento e enviar as informações do curso.
+          <p class="privacy">
+            Os dados de acesso ao Zoom e a grupos fechados serão enviados somente depois da confirmação da participação.
           </p>
-          <a class="button" href="index.html">Voltar ao site</a>
-        </div>
-      </section>
 
-      <footer class="footer">
-        <p><strong>Despertar Essencial — Autoconhecimento • Presença • Transformação</strong></p>
-        <p>Nazaré Pereira — Helper Pathwork®</p>
-      </footer>
-    </main>
+          <div class="actions">
+            <button class="button" id="submit-button" type="submit">Enviar minha inscrição</button>
+            <a class="back-link" href="index.html">Voltar para a Travessia Essencial</a>
+          </div>
+          <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
 
-    <script>
-      const FORMSPREE_ENDPOINT = "SUBSTITUA_PELO_LINK_DO_FORMSPREE";
+      <div class="confirmation" id="confirmation-area" aria-live="polite">
+        <div class="check" aria-hidden="true">✓</div>
+        <h2>Inscrição recebida!</h2>
+        <p>
+          Agradecemos seu interesse. Entraremos em contato pelo WhatsApp ou por e-mail para confirmar a vaga, orientar sobre o pagamento e enviar as informações do curso.
+        </p>
+        <a class="button" href="index.html">Voltar ao site</a>
+      </div>
+    </section>
 
-      const form = document.querySelector("#course-form");
-      const formArea = document.querySelector("#form-area");
-      const confirmationArea = document.querySelector("#confirmation-area");
-      const statusMessage = document.querySelector("#form-status");
-      const submitButton = document.querySelector("#submit-button");
-      const configurationNotice = document.querySelector("#configuration-notice");
-      const courseField = document.querySelector("#curso");
+    <footer class="footer">
+      <p><strong>Despertar Essencial — Autoconhecimento • Presença • Transformação</strong></p>
+      <p>Nazaré Pereira — Helper Pathwork®</p>
+    </footer>
+  </main>
 
-      const queryCourse = new URLSearchParams(window.location.search).get("curso");
-      if (queryCourse) {
-        courseField.value = queryCourse;
+  <script>
+    const form = document.querySelector("#course-form");
+    const formArea = document.querySelector("#form-area");
+    const confirmationArea = document.querySelector("#confirmation-area");
+    const statusMessage = document.querySelector("#form-status");
+    const submitButton = document.querySelector("#submit-button");
+    const courseField = document.querySelector("#curso");
+
+    const queryCourse = new URLSearchParams(window.location.search).get("curso");
+    if (queryCourse) courseField.value = queryCourse;
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Enviando...";
+      statusMessage.textContent = "Aguarde um instante.";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Falha no envio");
+
+        form.reset();
+        formArea.style.display = "none";
+        confirmationArea.style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (error) {
+        statusMessage.textContent = "Não foi possível enviar agora. Verifique sua conexão e tente novamente.";
+        submitButton.disabled = false;
+        submitButton.textContent = "Enviar minha inscrição";
       }
-
-      const isConfigured =
-        FORMSPREE_ENDPOINT.startsWith("https://formspree.io/f/") &&
-        !FORMSPREE_ENDPOINT.includes("SUBSTITUA_");
-
-      if (!isConfigured) {
-        configurationNotice.style.display = "block";
-        submitButton.disabled = true;
-        submitButton.textContent = "Formulário em preparação";
-      }
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        if (!isConfigured) {
-          statusMessage.textContent = "O recebimento das inscrições ainda não foi ativado.";
-          return;
-        }
-
-        if (!form.reportValidity()) {
-          return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent = "Enviando...";
-        statusMessage.textContent = "Aguarde um instante.";
-
-        try {
-          const response = await fetch(FORMSPREE_ENDPOINT, {
-            method: "POST",
-            body: new FormData(form),
-            headers: {
-              Accept: "application/json",
-            },
-          });
-
-          if (!response.ok) {
-            throw new Error("Não foi possível enviar o formulário.");
-          }
-
-          form.reset();
-          formArea.style.display = "none";
-          confirmationArea.style.display = "block";
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } catch (error) {
-          statusMessage.textContent =
-            "Não foi possível enviar agora. Verifique sua conexão e tente novamente.";
-          submitButton.disabled = false;
-          submitButton.textContent = "Enviar minha inscrição";
-        }
-      });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
